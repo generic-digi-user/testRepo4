@@ -1,0 +1,51 @@
+{
+  "generator-jhipster": {
+    "authenticationType": "jwt",
+    "cacheProvider": "no",
+    "serverPort": "8081",
+    "serviceDiscoveryType": "eureka",
+    "skipUserManagement": true,
+    "baseName": "app1",
+    "buildTool": "maven",
+    "databaseType": "no",
+    "devDatabaseType": "no",
+    "enableHibernateCache": false,
+    "enableSwaggerCodegen": true,
+    "enableTranslation": false,
+    "jhiPrefix": "jhi",
+    "languages": ["en", "fr"],
+    "messageBroker": false,
+    "nativeLanguage": "en",
+    "prodDatabaseType": "no",
+    "searchEngine": false,
+    "skipClient": true,
+    "testFrameworks": [],
+    "websocket": "",
+    "applicationType": "microservice",
+    "packageName": "com.wipro.digital",
+    "packageFolder": "com/wipro/digital",
+    "embeddableLaunchScript": false,
+    "dtoSuffix": "DTO",
+    "clientPackageManager": "npm",
+    "jhipsterVersion": "6.9.0",
+    "creationTimestamp": 1594184700932,
+    "skipI18nQuestion": true,
+    "askForTestOpts": {},
+    "askFori18n": {},
+    "jwtSecretKey": "YTMzM2QyNGE0MjliY2I5Y2IyZTU0YmI2MTJlZTcyOTVmNjk2ZGEyMjY2OTNkNGU0ZDQ0ODg5M2FhMGY3NDY5ZTA0ZGFhOWVkMGQ5ZjIwOTc4YWMzOWNhM2I5ZDU0M2JlYzI4MzRlMTViYjZjYWM4ZGRmMmUzZjIwMmY2NzBlMGU=",
+    "entitySuffix": "",
+    "otherModules": [
+      {
+        "name": "generator-jhipster-wdblueprint4",
+        "version": "0.0.0"
+      }
+    ],
+    "blueprints": [
+      {
+        "name": "generator-jhipster-wdblueprint4",
+        "version": "0.0.0"
+      }
+    ]
+  },
+  "entities": []
+}

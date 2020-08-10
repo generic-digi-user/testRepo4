@@ -1,0 +1,87 @@
+# ===================================================================
+# Spring Boot configuration.
+#
+# This configuration is used for unit/integration tests.
+#
+# ===================================================================
+
+# ===================================================================
+# Standard Spring Boot properties.
+# Full reference is available at:
+# http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+# ===================================================================
+
+eureka:
+  client:
+    enabled: false
+  instance:
+    appname: app1
+    instanceId: app1:${spring.application.instance-id:${random.value}}
+
+spring:
+  application:
+    name: app1
+  security:
+    user:
+      name: admin
+      password: admin
+      roles: USER, ADMIN
+  jackson:
+    serialization:
+      write-durations-as-timestamps: false
+  mail:
+    host: localhost
+  main:
+    allow-bean-definition-overriding: true
+  messages:
+    basename: i18n/messages
+  mvc:
+    favicon:
+      enabled: false
+  task:
+    execution:
+      thread-name-prefix: app-1-task-
+      pool:
+        core-size: 1
+        max-size: 50
+        queue-capacity: 10000
+    scheduling:
+      thread-name-prefix: app-1-scheduling-
+      pool:
+        size: 1
+  thymeleaf:
+    mode: HTML
+
+server:
+  port: 10344
+  address: localhost
+
+# ===================================================================
+
+# ===================================================================
+
+accelerator:
+  clientApp:
+    name: 'app1App'
+  logging:
+    # To test json console appender
+    use-json-format: false
+    logstash:
+      enabled: false
+      host: localhost
+      port: 5000
+      queue-size: 512
+  security:
+    authentication:
+      jwt:
+        # This token must be encoded using Base64 (you can type `echo 'secret-key'|base64` on your command line)
+        base64-secret: YTMzM2QyNGE0MjliY2I5Y2IyZTU0YmI2MTJlZTcyOTVmNjk2ZGEyMjY2OTNkNGU0ZDQ0ODg5M2FhMGY3NDY5ZTA0ZGFhOWVkMGQ5ZjIwOTc4YWMzOWNhM2I5ZDU0M2JlYzI4MzRlMTViYjZjYWM4ZGRmMmUzZjIwMmY2NzBlMGU=
+        # Token is valid 24 hours
+        token-validity-in-seconds: 86400
+# ===================================================================
+# Application specific properties
+# Add your own application properties here, see the ApplicationProperties class
+#
+# ===================================================================
+
+# application:
